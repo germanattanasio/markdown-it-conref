@@ -21,8 +21,8 @@ var resolve = function(path, object, defaultValue) {
 
 /**
  * Wrap the markdown-it-regexp plugin with the data from the file.
- * @param  {Object} md      The markdown-it object
- * @param  {Object} options The plugin options.
+ * @param {Object} md      The markdown-it object
+ * @param {Object} options The plugin options.
  * @param {Object} [options.file] The file with the data to replace
  * @param {Object} [options.data] The data to replace
  * @return {Function} The callback function
@@ -35,8 +35,8 @@ var wrapper = function Wrapper(md, options) {
 
 /**
  * Instantiate the plugin from a file or given object.
- * @param  {Object} md      The markdown-it object
- * @param  {Object} options The plugin options.
+ * @param {Object} md      The markdown-it object
+ * @param {Object} options The plugin options.
  * @param {Object} [options.file] The file with the data to replace
  * @param {Object} [options.data] The data to replace
  * @return {Function} The markdown-it plugin
