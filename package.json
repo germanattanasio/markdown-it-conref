@@ -31,7 +31,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --reporter spec",
-    "codevoc": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha",
+    "codecov": "npm run test && codecov"
   }
 }
