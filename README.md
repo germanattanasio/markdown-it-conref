@@ -1,4 +1,5 @@
-# markdown-it-conref [![Build Status](https://travis-ci.org/germanattanasio/markdown-it-conref.svg?branch=master)](http://travis-ci.org/germanattanasio/markdown-it-conref)
+# markdown-it-conref [![Build Status](https://travis-ci.org/germanattanasio/markdown-it-conref.svg?branch=master)](http://travis-ci.org/germanattanasio/markdown-it-conref) [![codecov](https://codecov.io/gh/germanattanasio/markdown-it-conref/branch/master/graph/badge.svg)](https://codecov.io/gh/germanattanasio/markdown-it-conref)
+
 Adds the ability to use DITA Content References —or conrefs— as a `markdown-it` plugin.
 
 ## Install
