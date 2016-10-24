@@ -1,9 +1,7 @@
 'use strict';
 
 var plugin = require('markdown-it-regexp');
-var extend = require('extend');
 var YAML = require('yamljs');
-var pkg = require('./package');
 
 /**
  * Gets the value at <code>path</code> of <code>object</code>.
@@ -44,13 +42,12 @@ var wrapper = function Wrapper(md, options) {
  * @return {Function} The markdown-it plugin
  */
 module.exports = function (md, options) {
-  var _options = extend({}, options);
-  if (_options.file) {
-    _options.data = YAML.load(_options.file);
+  if (options.file) {
+    options.data = YAML.load(options.file);
   }
-  if (!_options.data) {
-    throw new Error(pkg.name + ': file or data need to be specified.');
+  if (!options.data) {
+    throw new Error('file or data need to be specified.');
   }
 
-  return wrapper(md, _options);
+  return wrapper(md, options);
 };
