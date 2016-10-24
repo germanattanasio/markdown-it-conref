@@ -1,0 +1,8 @@
+.eslintrc.yml
+.travis.yml
+.DS_Store
+test
+node_modules
+coverage
+CONTRIBUTING.md
+deploy.sh

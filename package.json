@@ -1,0 +1,37 @@
+{
+  "name": "markdown-it-conref",
+  "version": "0.0.1",
+  "description": "Adds the ability to use DITA Content References —or conrefs— as a markdown-it plugin.",
+  "main": "index.js",
+  "keywords": [
+    "markdown-it",
+    "conref",
+    "DITA"
+  ],
+  "author": "German Attanasio Ruiz <germanattanasio@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/germanattanasio/markdown-it-conref.git"
+  },
+  "bugs": {
+    "url": "https://github.com/germanattanasio/markdown-it-conref/issues"
+  },
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "eslint": "^3.8.1",
+    "istanbul": "~0.4.0",
+    "markdown-it": "^8.0.1",
+    "mocha": "~2.4.1"
+  },
+  "dependencies": {
+    "extend": "~3.0.0",
+    "markdown-it-regexp": "~0.4.0",
+    "yamljs": "~0.2.8"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec",
+    "codevoc": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov"
+  }
+}

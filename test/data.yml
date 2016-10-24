@@ -1,0 +1,4 @@
+site:
+  batman: 'Bruce Wayne'
+  foo: 'Foo'
+  bar: 'Bar'
