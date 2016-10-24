@@ -27,6 +27,13 @@ describe('markdown-it-conref', function() {
     )
   });
 
+  it('should ignore empty variables', function() {
+    assert.equal('<p>hello {{}}</p>\n', markdownIt()
+      .use(conref, { data : { } })
+      .render('hello {{}}')
+    )
+  });
+
   it('should throw error if data and file are null', function() {
     assert.throws(function() {
       markdownIt()
