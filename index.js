@@ -42,10 +42,10 @@ var wrapper = function Wrapper(md, options) {
  * @return {Function} The markdown-it plugin
  */
 module.exports = function (md, options) {
-  if (options.file) {
+  if (options && options.file) {
     options.data = YAML.load(options.file);
   }
-  if (!options.data) {
+  if (!options || !options.data) {
     throw new Error('file or data need to be specified.');
   }
 
