@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-conref",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adds the ability to use DITA Content References —or conrefs— as a markdown-it plugin.",
   "main": "index.js",
   "keywords": [
