@@ -9,7 +9,17 @@ describe('markdown-it-conref', function() {
   it('should replace variables from a given object', function() {
     assert.equal('<p>hello Bruce Wayne</p>\n', markdownIt()
       .use(conref, { data : { site: { batman: 'Bruce Wayne' } } } )
-      .render('hello {{site.batman}}')
+      .render('hello {{  site.batman}}')
+    )
+
+    assert.equal('<p>hello Bruce Wayne</p>\n', markdownIt()
+      .use(conref, { data : { site: { batman: 'Bruce Wayne' } } } )
+      .render('hello {{site.batman  }}')
+    )
+
+    assert.equal('<p>hello Bruce Wayne</p>\n', markdownIt()
+      .use(conref, { data : { site: { batman: 'Bruce Wayne' } } } )
+      .render('hello {{ site.batman }}')
     )
   });
 
