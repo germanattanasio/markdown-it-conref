@@ -28,8 +28,8 @@ var resolve = function(path, object, defaultValue) {
  * @return {Function} The callback function
  */
 var wrapper = function Wrapper(md, options) {
-  return plugin(/{{[\ ]*([\w\.]*?)[\ ]*}}/, function Maching(match, utils) {
-    return utils.escape(resolve(match[1], options.data, match[0]));
+  return plugin(/{{[\ ]*([\w\.]*?)[\ ]*}}/, function Maching(match) {
+    return resolve(match[1], options.data, match[0]);
   })(md, options);
 }
 
